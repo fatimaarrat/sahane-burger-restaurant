@@ -8,7 +8,7 @@ import { useCart } from "../../Context/CartContext";
 const Header = () => {
   const [nav, setNav] = useState(false);
   const { cartItems } = useCart();
-  const location = useLocation(); // لمعرفة الصفحة الحالية
+  const location = useLocation();
 
   const changeValueOnScroll = () => {
     const scrollValue = document?.documentElement?.scrollTop;
@@ -20,8 +20,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", changeValueOnScroll);
   }, []);
 
-  // دالة لمساعدتنا في تحديد متى يجب أن يكون الهيدر ملوناً (Sticky)
-  // يكون ملوناً إذا نزلنا بالسكرول، أو إذا كنا في أي صفحة غير الرئيسية (مثل السلة)
   const isSticky = nav || location.pathname !== "/";
 
   return (
@@ -33,20 +31,22 @@ const Header = () => {
         className={isSticky ? "sticky" : ""}
       >
         <Container>
-          <Navbar.Brand as={Link} to="/#homeS">
+          <Navbar.Brand as={Link} to="/">
             <img src={Logo} alt="Şahane Burger Logo" className="img-fluid" />
           </Navbar.Brand>
+
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link as={Link} to="/#homeS">ANA SAYFA</Nav.Link>
-              
-              {/* إذا كنا في صفحة السلة، نضع الرابط كاملاً ليعود للرئيسية ثم ينزل للسيكشن */}
-              <Nav.Link href="/#about">HAKKIMIZDA</Nav.Link>
-              <Nav.Link href="/#menu">MENÜ</Nav.Link>
-              <Nav.Link href="/#shop">MAĞAZA</Nav.Link>
-              <Nav.Link href="/#blog">BLOG</Nav.Link>
-              <Nav.Link href="/#Contact">İLETİŞİM</Nav.Link>
+              <Nav.Link as={Link} to="/">
+                ANA SAYFA
+              </Nav.Link>
+
+              <Nav.Link href="#/#about">HAKKIMIZDA</Nav.Link>
+              <Nav.Link href="#/#menu">MENÜ</Nav.Link>
+              <Nav.Link href="#/#shop">MAĞAZA</Nav.Link>
+              <Nav.Link href="#/#blog">BLOG</Nav.Link>
+              <Nav.Link href="#/#Contact">İLETİŞİM</Nav.Link>
 
               <Nav.Link as={Link} to="/cart">
                 <div className="cart">
