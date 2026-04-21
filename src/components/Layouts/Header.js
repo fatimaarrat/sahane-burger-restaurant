@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link"; // المكتبة الجديدة
 import Logo from "../../assets/logo/logo.png";
 import "../../styles/HeaderStyle.css";
 import { useCart } from "../../Context/CartContext";
@@ -31,22 +32,32 @@ const Header = () => {
         className={isSticky ? "sticky" : ""}
       >
         <Container>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand as={NavHashLink} smooth to="/#homeS">
             <img src={Logo} alt="Şahane Burger Logo" className="img-fluid" />
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link as={Link} to="/">
+              <Nav.Link as={NavHashLink} smooth to="/#homeS">
                 ANA SAYFA
               </Nav.Link>
 
-              <Nav.Link href="#/#about">HAKKIMIZDA</Nav.Link>
-              <Nav.Link href="#/#menu">MENÜ</Nav.Link>
-              <Nav.Link href="#/#shop">MAĞAZA</Nav.Link>
-              <Nav.Link href="#/#blog">BLOG</Nav.Link>
-              <Nav.Link href="#/#Contact">İLETİŞİM</Nav.Link>
+              <Nav.Link as={NavHashLink} smooth to="/#about">
+                HAKKIMIZDA
+              </Nav.Link>
+              <Nav.Link as={NavHashLink} smooth to="/#menu">
+                MENÜ
+              </Nav.Link>
+              <Nav.Link as={NavHashLink} smooth to="/#shop">
+                MAĞAZA
+              </Nav.Link>
+              <Nav.Link as={NavHashLink} smooth to="/#blog">
+                BLOG
+              </Nav.Link>
+              <Nav.Link as={NavHashLink} smooth to="/#Contact">
+                İLETİŞİM
+              </Nav.Link>
 
               <Nav.Link as={Link} to="/cart">
                 <div className="cart">
