@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sahane-burger-restaurant/static/css/main.94c6081c.css",
-    "main.js": "/sahane-burger-restaurant/static/js/main.fdcab425.js",
+    "main.js": "/sahane-burger-restaurant/static/js/main.adefdd9e.js",
     "static/js/787.9961f7df.chunk.js": "/sahane-burger-restaurant/static/js/787.9961f7df.chunk.js",
     "static/media/logo.png": "/sahane-burger-restaurant/static/media/logo.d3426ff481658536d6ab.png",
     "static/media/pro.png": "/sahane-burger-restaurant/static/media/pro.dd62423e1dd88af2fc05.png",
@@ -38,11 +38,11 @@
     "static/media/brand-16.png": "/sahane-burger-restaurant/static/media/brand-16.ce2fb50b26c790b6d74a.png",
     "index.html": "/sahane-burger-restaurant/index.html",
     "main.94c6081c.css.map": "/sahane-burger-restaurant/static/css/main.94c6081c.css.map",
-    "main.fdcab425.js.map": "/sahane-burger-restaurant/static/js/main.fdcab425.js.map",
+    "main.adefdd9e.js.map": "/sahane-burger-restaurant/static/js/main.adefdd9e.js.map",
     "787.9961f7df.chunk.js.map": "/sahane-burger-restaurant/static/js/787.9961f7df.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.94c6081c.css",
-    "static/js/main.fdcab425.js"
+    "static/js/main.adefdd9e.js"
   ]
 }
